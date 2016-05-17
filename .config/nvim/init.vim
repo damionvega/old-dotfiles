@@ -2,7 +2,7 @@
 " PLUGINS {{{
 " ==============================================================================
 
-call plug#begin('~/.nvim/plugs')
+call plug#begin('~/.config/nvim/plugs')
 
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -71,7 +71,6 @@ set undodir=~/.config/nvim/undo
 set cursorline " Highlight current line
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
-set encoding=utf-8 nobomb " BOM often causes trouble
 set esckeys " Allow cursor keys in insert mode.
 set expandtab " Expand tabs to spaces - github, other editor friendly
 set foldcolumn=0 " Don't show column folds
@@ -378,15 +377,9 @@ augroup END
 augroup deoplete_config
   autocmd!
   let g:deoplete#enable_at_startup = 1
-  " disable autocomplete
-  " let g:deoplete#disable_auto_complete = 1
-
-  if has("gui_running")
-    inoremap <silent><expr><C-Space> deoplete#mappings#manual_complete()
-  else
-    inoremap <silent><expr><C-@> deoplete#mappings#manual_complete()
-  endif
-
+	let g:deoplete#enable_refresh_always = 1
+	let g:deoplete#sources = {}
+	let g:deoplete#sources._ = ['ultisnips']
   nnoremap <leader>uu :UpdateRemotePlugins<CR>
 augroup END
 
