@@ -13,7 +13,7 @@ Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
 Plug 'damionvega/vim-javascript'
 Plug 'derekwyatt/vim-scala'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
@@ -441,6 +441,7 @@ augroup END
 augroup fzf_config
   autocmd!
   nmap <leader>t :FZF<CR>
+  let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git --ignore node_modules -g ""'
 augroup END
 
 " Gitgutter --------------------------------------------------------------------
@@ -549,9 +550,6 @@ augroup END
 " Ultisnips --------------------------------------------------------------------
 augroup ultisnips_config
   autocmd!
-
-  " inoremap <silent><expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
   let g:UltiSnipsExpandTrigger = '<tab>'
   let g:UltiSnipsJumpForwardTrigger = '<tab>'
   let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
@@ -570,8 +568,8 @@ augroup END
 augroup vimwiki_config
   autocmd!
   " Use markdown
+  " TODO: Syntax is still vimwiki, but at least the file is md
   let g:vimwiki_list = [{ 'path': '~/.vw', 'syntax': 'markdown', 'ext': '.md' }]
-  let g:vimwiki_global_ext = 0
 augroup END
 
 
