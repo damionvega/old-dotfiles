@@ -4,7 +4,7 @@
 # Functions
 #-----------------------------------------------------------------------------
 
-notice() { echo  "..."; }
+notice() { echo  "...$1"; }
 
 backup() {
   mkdir -p $backupdir
@@ -66,7 +66,7 @@ if [ -d $HOME/.dotfiles ]; then
 else
   # Clone Repo
   notice "Downloading"
-  git clone --recursive git://github.com/damionvega/dotfiles.git $HOME/.dotfiles
+  git clone --recursive git://github.com/damionjn/dotfiles.git $HOME/.dotfiles
 
   pushd $HOME/.dotfiles
 
@@ -85,6 +85,6 @@ fi
 #-----------------------------------------------------------------------------
 
 popd
-notice "Done!"
+notice "Done"
 exec $SHELL -l
 
