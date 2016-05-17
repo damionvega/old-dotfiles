@@ -53,6 +53,7 @@ set t_Co=256
 set background=dark
 syntax on
 colorscheme gruvbox
+let g:gruvbox_contrast_dark = 'soft'
 
 " Change mapleader
 let mapleader=','
