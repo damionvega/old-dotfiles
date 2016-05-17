@@ -1,6 +1,8 @@
-# (Borrowed from @gf3)
+# (Thanks @gf3)
 
 set fish_greeting
+
+. ~/.config/fish/z.fish
 
 set -x EDITOR nvim
 set -x GREP_COLOR "1;37;45"
@@ -36,6 +38,7 @@ function t        ; command tree -C $argv ; end
 function tmux     ; command tmux -2 $argv ; end
 function tunnel   ; ssh -D 8080 -C -N $argv ; end
 function v        ; nvim $argv ; end
+function vp       ; nvim -p $argv ; end
 
 # Completions
 function make_completion --argument-names alias command

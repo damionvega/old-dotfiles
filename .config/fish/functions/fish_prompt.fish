@@ -1,4 +1,4 @@
-# (Borrowed from @gf3)
+# (Thanks @gf3)
 
 
 function fish_prompt

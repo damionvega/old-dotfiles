@@ -1,4 +1,5 @@
-# (Borrowed from @gf3)
+# (Thanks @gf3)
+#
 # Open the current repository in github. Will automatically detect the current
 # branch. Does *not* need to be run from the repository root.
 #
