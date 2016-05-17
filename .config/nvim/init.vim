@@ -4,10 +4,6 @@
 
 call plug#begin('~/.config/nvim/plugs')
 
-function! DoRemote(arg)
-  UpdateRemotePlugins
-endfunction
-
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
@@ -23,7 +19,6 @@ Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'Shougo/neosnippet'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
@@ -372,16 +367,6 @@ augroup END
 augroup commentary_config
   autocmd!
   autocmd FileType jade setlocal commentstring=//\ %s
-augroup END
-
-" Deoplete ----------------------------------------------------------------------
-augroup deoplete_config
-  autocmd!
-  let g:deoplete#enable_at_startup = 1
-	let g:deoplete#enable_refresh_always = 1
-	let g:deoplete#sources = {}
-	let g:deoplete#sources._ = ['ultisnips']
-  nnoremap <leader>uu :UpdateRemotePlugins<CR>
 augroup END
 
 " Dispatch ---------------------------------------------------------------------
