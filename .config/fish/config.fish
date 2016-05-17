@@ -51,7 +51,7 @@ function gup    ; git pull --rebase ; end
 function gp     ; git push ; end
 function gcm    ; git commit -m $argv ; end
 function gco    ; git checkout $argv ; end
-function gr     ; git remote ; end
+function gr     ; git remote $argv ; end
 function grv    ; git remote -v ; end
 function gsta   ; git stash ; end
 function gsp    ; git stash pop ; end
