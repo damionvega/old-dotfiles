@@ -52,8 +52,8 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set t_Co=256
 set background=dark
 syntax on
-colorscheme gruvbox
 let g:gruvbox_contrast_dark = 'soft'
+colorscheme gruvbox
 
 " Change mapleader
 let mapleader=','
