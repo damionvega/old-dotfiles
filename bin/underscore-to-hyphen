@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Convert underscores to hyphens in your file names.
+# Accepts a single file or a single directory.
+
+
+files_hyphenated=0
+
+hyphenate() {
+  arg=$1
+
+  if [ -d $arg ]; then
+    recurse $arg
+    dir=$arg
+
+  elif [ -f $arg ]; then
+    echo $arg
+
+    dir=$(dirname $arg)
+    file=$(basename $arg)
+    mv $arg "$dir/$(echo $file | sed -e 's/_/-/g')"
+
+    ((++files_hyphenated))
+  else
+    echo 'ERROR: Provide a file or a directory.'
+  fi
+}
+
+recurse() {
+  dir=$1
+
+  echo -e "\nRecursing $dir ..."
+
+  for file in $dir/*; do
+    hyphenate $file
+  done
+}
+
+
+hyphenate $1
+
+echo -e "\n$files_hyphenated files hyphenated! Have have the best day of your life!\n"
+

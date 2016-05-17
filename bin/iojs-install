@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+IOJS_VERSION=v0.0.0
+IOJS_DIR=$HOME/.iojs
+
+
+iojs_install() {
+  iojs_setup
+  iojs_download
+  iojs_assemble
+  iojs_teardown
+}
+
+iojs_setup() {
+  echo '[1/3] Getting latest version'
+  IOJS_VERSION=v${1:-$(curl -s https://iojs.org/dist/index.json | sed -e 's/^.*"version":"\([^"]*\)".*$/\1/' | head -n 2 | tail -n -1 | cut -c 2-)}
+
+  mkdir -p $IOJS_DIR && rm -rf $IOJS_DIR/*
+}
+
+iojs_download() {
+  echo '[2/3] Downloading io.js' ${IOJS_VERSION}
+  curl -s https://iojs.org/dist/${IOJS_VERSION}/iojs-${IOJS_VERSION}-linux-x64.tar.gz | tar zx -C $IOJS_DIR --strip-components=1
+}
+
+iojs_assemble() {
+  echo '[3/3] Adding binaries to PATH'
+  printf '%s\n' '' '# io.js environment' "export PATH=$IOJS_DIR/bin:\$PATH" \
+  "export NODE_PATH=$IOJS_DIR/lib/node_modules" >> ~/.bashrc
+
+  . ~/.bashrc
+}
+
+iojs_teardown() {
+  echo '====> Done'
+  printf '%s\n' '' "iojs -v: $(iojs -v)" "npm -v: $(npm -v)"
+  unset -f iojs_install iojs_setup iojs_download iojs_assemble iojs_teardown IOJS_VERSION IOJS_DIR
+}
+
+
+iojs_install

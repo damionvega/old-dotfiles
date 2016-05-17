@@ -1,0 +1,394 @@
+# Use strict
+snippet u
+'use strict'
+${1}
+endsnippet
+
+# console log
+snippet cl
+console.log(${1})
+endsnippet
+
+# console log parameters
+snippet cll
+console.log('${1:}', $1)
+endsnippet
+
+# console log pretty JSON
+snippet clj
+console.log(JSON.stringify(${1}, null, 2))
+endsnippet
+
+# console log parameters pretty JSON
+snippet cllj
+console.log('${1:}', JSON.stringify($1, null, 2))
+endsnippet
+
+# console error
+snippet ce
+console.error(${1})
+endsnippet
+
+# Documentation
+snippet docu
+/**
+ * ${1}
+ */
+endsnippet
+
+snippet f "Anonymous function" ws
+function (${1}) {
+  ${2}
+}
+endsnippet
+
+# Arrow function
+snippet f> "Anonymous function ES6" i
+${1} => {
+  ${2}
+}
+endsnippet
+
+# Arrow function with parens
+snippet f>) "Anonymous function ES6" i
+(${1}) => {
+  ${2}
+}
+endsnippet
+
+snippet fo "ES6 object method" ws
+${1}(${2}) {
+  ${4}
+}${3:,}
+endsnippet
+
+# Arrow function factory function
+snippet ff. "Anonymous function ES6 return" i
+const ${1} = (${2}) => ({
+	${3}
+})
+endsnippet
+
+# Arrow function simple
+snippet f>> "Anonymous function ES6 return" i
+${1} => ${2}
+endsnippet
+
+# Arrow function simple with parens
+snippet f>>) "Anonymous function ES6 return" i
+(${1}) => ${2}
+endsnippet
+
+# Function declaration
+snippet fun
+function ${1}(${2}) {
+  ${3}
+}
+endsnippet
+
+# Function expression
+snippet vf
+var ${1} = function (${2}) {
+  ${3}
+}
+endsnippet
+
+# Function expression ES6
+snippet vf>
+var ${1} = (${2}) => {
+  ${3}
+}
+endsnippet
+
+# Self-invoking Function
+snippet si
+!function (${1}) {
+  ${2}
+}()
+endsnippet
+
+# Self-invoking Function ES6
+snippet si>
+((${1}) => {
+  ${2}
+})()
+endsnippet
+
+# Node require
+snippet vr
+var ${1:} = require('$1')
+endsnippet
+
+# Node require
+snippet lt
+let ${1:} = require('$1')
+endsnippet
+
+# Export
+snippet mod
+module.exports = ${1}
+endsnippet
+
+# Function export
+snippet modf
+module.exports = function (${1}) {
+  ${2}
+}
+endsnippet
+
+# Prototype
+snippet proto
+${1}.prototype.${2} = function (${3}) {
+  ${4}
+}
+endsnippet
+
+# Prototype ES6
+snippet proto>
+${1}.prototype.${2} = (${3}) => {
+  ${4}
+}
+endsnippet
+
+# if
+snippet if
+if (${1})
+  ${2}
+endsnippet
+
+# if else
+snippet ife
+if (${1})
+  ${2}
+else
+  ${3}
+endsnippet
+
+# if w/ braces
+snippet if}
+if (${1}) {
+  ${2}
+}
+endsnippet
+
+# if else w/ braces
+snippet ife}
+if (${1}) {
+  ${2}
+} else {
+  ${3}
+}
+endsnippet
+
+# ternary conditional
+snippet ter
+${1}
+  ? ${2}
+  : ${3}
+endsnippet
+
+# switch
+snippet switch
+switch (${1}) {
+  case '${3}':
+    ${4}
+    break
+  ${5}
+  default:
+    ${2}
+}
+endsnippet
+
+# for loop
+snippet for
+for (var i = 0; i < ${1:}.length; i++) {
+  $1[i]
+}
+endsnippet
+
+# Try catch
+snippet try "Try catch"
+try {
+	${1}
+} catch (${2}) {
+	${3}
+}
+endsnippet
+
+# Improved native for-loop
+snippet forr
+for (var ${2:} = ${1:}.length - 1; $2 >= 0; $2--) {
+  ${3:$1[$2]}
+}
+endsnippet
+
+# setTimeout function
+snippet time
+setTimeout(function () {
+  ${3}
+}${2}, ${1:500})
+endsnippet
+
+# setTimeout function ES6
+snippet time>
+setTimeout(() => {
+  ${3}
+}${2}, ${1:500})
+endsnippet
+
+# Get by ID
+snippet getid
+document.getElementById('${1}')
+endsnippet
+
+# Get by Tag name
+snippet gettag
+document.getElementsByTagName('${1}')
+endsnippet
+
+# Get by Class name
+snippet getclass
+document.getElementsByClassName('${1}')
+endsnippet
+
+# Query Selector
+snippet qs
+document.querySelector('${1}')
+endsnippet
+
+# Query Selector
+snippet qsa
+document.querySelectorAll('${1}')
+endsnippet
+
+# Bind
+snippet .b
+.bind(${1:this})
+endsnippet
+
+# Import
+snippet im
+import ${1} from '${2}'
+endsnippet
+
+# Import complete
+snippet imf
+import ${1} from '$1'
+endsnippet
+
+# Export default
+snippet ed
+export default ${1}
+endsnippet
+
+# Then
+snippet .t "Then" s
+.then(function (${1}) {
+  ${2}
+}${3:, function (err) {
+
+}})
+endsnippet
+
+# Then ES6
+snippet .t> "Then ES6" si
+.then(${1} => {
+  ${2}
+}${3:, err => {
+
+}})
+endsnippet
+
+# Then ES6 parens
+snippet .t>) "Then ES6 parens" si
+.then((${1}) => {
+  ${2}
+}${3:, (err) => {
+
+}})
+endsnippet
+
+# Catch
+snippet .c "Promise catch" i
+.catch(function (err) {
+  ${1}
+})
+endsnippet
+
+# Catch ES6
+snippet .c> "Promise catch" i
+.catch(err => {
+  ${1}
+})
+endsnippet
+
+# Catch ES6 parens
+snippet .c>) "Promise catch parens" i
+.catch((err) => {
+  ${1}
+})
+endsnippet
+
+#	Filter
+snippet _f
+_.filter(${1}, function (${2}) {
+  ${3}
+})
+endsnippet
+
+#	Filter ES6
+snippet _ff
+_.filter(${1}, ${2} => {
+  ${3}
+})
+endsnippet
+
+#	Map
+snippet _m
+_.map(${1}, function (${2}) {
+  ${3}
+})
+endsnippet
+
+#	Map ES6
+snippet _mm
+_.map(${1}, ${2} => {
+  ${3}
+})
+endsnippet
+
+#	Each
+snippet _e
+_.each(${1}, function (${2}) {
+  ${3}
+})
+endsnippet
+
+#	Each ES6
+snippet _ee
+_.each(${1}, ${2} => {
+  ${3}
+})
+endsnippet
+
+# ES6
+snippet f* "Generator function" ws
+function* ${1}(${2}) {
+	${3}
+}
+endsnippet
+
+# Return new promise
+snippet rnp "Return new promise" s
+return new Promise(function (resolve, reject) {
+	${1}
+})
+endsnippet
+
+# Return new promise ES6
+snippet rnp> "Return new promise ES6" s
+return new Promise((resolve, reject) => {
+	${1}
+})
+endsnippet
+
