@@ -9,6 +9,7 @@ function! DoRemote(arg)
 endfunction
 
 Plug 'airblade/vim-gitgutter'
+Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
 Plug 'damionvega/vim-javascript'
 Plug 'derekwyatt/vim-scala'
@@ -18,9 +19,7 @@ Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'ElmCast/elm-vim'
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'mxw/vim-jsx'
-Plug 'nathanaelkane/vim-indent-guides'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -62,9 +61,9 @@ let mapleader=','
 set clipboard+=unnamedplus
 
 " Local dirs
-set backupdir=~/.nvim/backups
-set directory=~/.nvim/swaps
-set undodir=~/.nvim/undo
+set backupdir=~/.config/nvim/backups
+set directory=~/.config/nvim/swaps
+set undodir=~/.config/nvim/undo
 
 " ------------------------------------------------------------------------------
 " Basic settings [[[
@@ -357,6 +356,12 @@ augroup filetype_markdown
   let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
 augroup END
 
+" Fish -------------------------------------------------------------------------
+augroup filetype_fish
+  autocmd!
+  au BufRead,BufNewFile *.fish set ft=fish
+augroup END
+
 
 " }}}
 " ==============================================================================
@@ -557,7 +562,7 @@ augroup ultisnips_config
   let g:UltiSnipsExpandTrigger = '<tab>'
   let g:UltiSnipsJumpForwardTrigger = '<tab>'
   let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-  let g:UltiSnipsSnippetDirectories = [$HOME.'/.nvim/snippets']
+  let g:UltiSnipsSnippetDirectories = [$HOME.'/.config/nvim/ultisnips']
   nmap <leader>ue :UltiSnipsEdit<CR>
 augroup END
 
