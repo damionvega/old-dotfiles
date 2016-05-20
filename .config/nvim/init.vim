@@ -266,10 +266,6 @@ nnoremap <S-k> <Nop>
 " Delete line while in insert mode
 inoremap <C-d> <esc>ddi
 
-" Keep block selected
-vmap < <gv
-vmap > >gv
-
 
 " ]]]
 " ==============================================================================
