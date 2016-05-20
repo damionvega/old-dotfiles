@@ -19,7 +19,6 @@ Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
-Plug 'Shougo/neosnippet'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
@@ -470,23 +469,6 @@ augroup limelight_config
   let g:limelight_default_coefficient = 0.9
   " Number of preceding/following paragraphs to include (default: 0)
   let g:limelight_paragraph_span = 1
-augroup END
-
-" Neosnippet -------------------------------------------------------------------
-augroup neosnippet_config
-  autocmd!
-  " Disable neosnippet-snippets
-  let g:neosnippet#disable_runtime_snippets = { '_' : 1, }
-  let g:neosnippet#snippets_directory='~/.nvim/snippets'
-
-  " SuperTab-like snippets behavior
-  imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-  \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-  " For conceal markers.
-  if has('conceal')
-    set conceallevel=2 concealcursor=niv
-  endif
 augroup END
 
 " Nerdtree ---------------------------------------------------------------------
