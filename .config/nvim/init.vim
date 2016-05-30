@@ -7,29 +7,23 @@ call plug#begin('~/.config/nvim/plugs')
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
-Plug 'damionvega/vim-javascript'
-Plug 'derekwyatt/vim-scala'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'ElmCast/elm-vim'
-Plug 'mxw/vim-jsx'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-markdown',   { 'for': 'markdown' }
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/jade.vim', { 'for': 'jade' }
 Plug 'vimwiki/vimwiki'
-Plug 'wavded/vim-stylus',    { 'for': 'stylus' }
 
 call plug#end()
 

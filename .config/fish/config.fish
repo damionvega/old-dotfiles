@@ -49,6 +49,7 @@ function gdc    ; git diff --cached ; end
 function gl     ; git pull ; end
 function gup    ; git pull --rebase ; end
 function gp     ; git push ; end
+function gpt    ; git push --tags ; end
 function gcm    ; git commit -m $argv ; end
 function gco    ; git checkout $argv ; end
 function gr     ; git remote $argv ; end
@@ -98,7 +99,7 @@ function nusd ; npm un -D $argv ; end
 function nr   ; npm run $argv ; end
 
 # Elm
-function epi ; elm package install -y ; end
+function epi ; elm package install -y $argv ; end
 
 # Start mongo as daemon
 function mongodd ; mongod --fork --logpath /data/log/mongodb.log ; end
