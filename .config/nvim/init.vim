@@ -7,6 +7,7 @@ call plug#begin('~/.config/nvim/plugs')
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
+Plug 'ElmCast/elm-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
