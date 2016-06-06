@@ -4,6 +4,10 @@ set fish_greeting
 
 . ~/.config/fish/z.fish
 
+if test -e ~/.vars.fish
+  . ~/.vars.fish
+end
+
 set -x EDITOR nvim
 set -x GREP_COLOR "1;37;45"
 set -x JRUBYOPT "-Xcext.enabled=true"
@@ -14,11 +18,14 @@ set -x RBXOPT -X19
 set -x PRIVATE_KEY "$HOME/.ssh/id_rsa"
 set -x FZF_DEFAULT_COMMAND 'ag -l -g ""'
 set -x FZF_CTRL_T_COMMAND "$FZF_DEFAULT_COMMAND"
+set -x EC2_HOME "/usr/local/ec2/ec2-api-tools-1.7.5.1"
+set -x JAVA_HOME "/Library/Java/JavaVirtualMachines/jdk1.8.0_71.jdk/Contents/Home"
 
 # Paths
 test -d ~/bin           ; and set PATH ~/bin $PATH
 test -d /usr/local/bin  ; and set PATH /usr/local/bin $PATH
 test -d /usr/local/sbin ; and set PATH /usr/local/sbin $PATH
+test -d "$EC2_HOME/bin" ; and set PATH "$EC2_HOME/bin" $PATH
 
 # Navigation
 function ..    ; cd .. ; end
