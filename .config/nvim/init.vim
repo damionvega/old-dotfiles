@@ -526,9 +526,7 @@ augroup END
 " Vim-wiki ---------------------------------------------------------------------
 augroup vimwiki_config
   autocmd!
-  " Use markdown
-  " TODO: Syntax is still vimwiki, but at least the file is md
-  let g:vimwiki_list = [{ 'path': '~/.vw', 'syntax': 'markdown', 'ext': '.md' }]
+  let g:vimwiki_list = [{ 'path': '~/.vw' }]
 augroup END
 
 
