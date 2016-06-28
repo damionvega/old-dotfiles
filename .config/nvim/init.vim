@@ -24,7 +24,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -117,7 +116,6 @@ set wildmode=list:longest " Complete only until point of ambiguity.
 set winminheight=0 "Allow splits to be reduced to a single line.
 set wrapscan " Searches wrap around end of file
 silent !tmux set status on " Enable tmux status bar
-
 
 " ]]]
 " ------------------------------------------------------------------------------
@@ -260,7 +258,6 @@ nnoremap <S-k> <Nop>
 " Delete line while in insert mode
 inoremap <C-d> <esc>ddi
 
-
 " ]]]
 " ==============================================================================
 " Helpers [[[
@@ -324,7 +321,6 @@ inoremap { {}<Esc>i
 inoremap ' <C-R>=CheckIfEscaped()<CR>
 inoremap " ""<Esc>i
 inoremap ` ``<Esc>i
-
 
 " ]]]
 "
@@ -435,12 +431,10 @@ augroup goyo_config
 
   function! s:goyo_enter()
     silent !tmux set status off
-    Limelight
   endfunction
 
   function! s:goyo_leave()
     silent !tmux set status on
-    Limelight!
   endfunction
 
   autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -522,13 +516,6 @@ augroup vimplug_config
   " Install plugins
   nmap <leader>i :PlugInstall<CR>
 augroup END
-
-" Vim-wiki ---------------------------------------------------------------------
-augroup vimwiki_config
-  autocmd!
-  let g:vimwiki_list = [{ 'path': '~/.vw' }]
-augroup END
-
 
 " }}}
 
