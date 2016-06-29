@@ -471,6 +471,13 @@ augroup nerdtree_config
   let NERDTreeShowHidden = 1
 augroup END
 
+" Polyglot ---------------------------------------------------------------------
+augroup polyglot_config
+  autocmd!
+  " Blocks my theme's syntax
+  let g:polyglot_disabled = ['markdown']
+augroup END
+
 " Silver Searcher --------------------------------------------------------------
 augroup ag_config
   autocmd!
