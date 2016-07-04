@@ -47,6 +47,7 @@ function gz       ; tar -zcvf $argv ; end
 
 # Neovim
 function v  ; nvim $argv ; end
+function v. ; nvim . ; end
 function vp ; nvim -p $argv ; end
 
 # Git
