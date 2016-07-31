@@ -305,10 +305,10 @@ noremap <leader>e :call StripSemicolons()<CR>
 
 " Quick Pairs
 function! CheckIfEscaped()
-  let line = getline('.')[:col('.')-2]
+  let line = getline('.')[:col('.') - 2]
   if line[-1:] is# '\'
     return "'"
-  elseif match(line[-1:], '\a') > -1 " Check for words like don't
+  elseif line[-1:]=~'\a' " Check for words like 'don't'
     return "'"
   else
     return "''\<Esc>\i"
