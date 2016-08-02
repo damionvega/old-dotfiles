@@ -291,27 +291,30 @@ endsnippet
 snippet .t "Then" s
 .then(function (${1}) {
   ${2}
-}${3:, function (err) {
+})
+${3:.catch(function (err) {
 
-}})
+})}
 endsnippet
 
 # Then ES6
 snippet .t> "Then ES6" si
 .then(${1} => {
   ${2}
-}${3:, err => {
+})
+${3:.catch(err => {
 
-}})
+})}
 endsnippet
 
 # Then ES6 parens
 snippet .t>) "Then ES6 parens" si
 .then((${1}) => {
   ${2}
-}${3:, (err) => {
+})
+${3:.catch((err) => {
 
-}})
+})}
 endsnippet
 
 # Catch
