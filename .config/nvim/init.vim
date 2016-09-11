@@ -7,11 +7,10 @@ call plug#begin('~/.config/nvim/plugs')
 Plug 'airblade/vim-gitgutter'
 Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
-Plug 'ElmCast/elm-vim'
+" Plug 'ElmCast/elm-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -21,6 +20,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
@@ -469,6 +469,12 @@ augroup nerdtree_config
   nnoremap <leader>f :NERDTreeFind<CR>
   let NERDTreeMinimalUI = 1
   let NERDTreeShowHidden = 1
+augroup END
+
+" Obsession --------------------------------------------------------------------
+augroup obsession_config
+  autocmd!
+  nnoremap <leader>o :Obsess<CR>
 augroup END
 
 " Polyglot ---------------------------------------------------------------------
