@@ -24,6 +24,7 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'vim-scripts/fountain.vim'
 
 call plug#end()
 
@@ -35,13 +36,15 @@ call plug#end()
 " NeoVim
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+set t_Co=256
 
 " Set syntax highlighting
-set t_Co=256
 set background=dark
 syntax on
+
+" Color scheme
+colo gruvbox
 let g:gruvbox_contrast_dark = 'soft'
-colorscheme gruvbox
 
 " Change mapleader
 let mapleader=','
