@@ -43,8 +43,8 @@ set background=dark
 syntax on
 
 " Color scheme
-colo gruvbox
 let g:gruvbox_contrast_dark = 'soft'
+colo gruvbox
 
 " Change mapleader
 let mapleader=','
@@ -338,6 +338,14 @@ augroup filetype_markdown
   " Keep cursor vertically in middle for writing & width of 80 chars
   au BufNewFile,BufReadPost *.md setlocal ft=markdown syntax=markdown so=999 tw=80
   let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
+augroup END
+
+
+" Screen -----------------------------------------------------------------------
+augroup filetype_screen
+  autocmd!
+  " Keep cursor vertically in middle for writing & width of 80 chars
+  au BufNewFile,BufReadPost *.screen setlocal ft=screen syntax=txt so=999 tw=80
 augroup END
 
 " Fish -------------------------------------------------------------------------
