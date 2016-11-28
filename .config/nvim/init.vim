@@ -340,12 +340,12 @@ augroup filetype_markdown
   let g:markdown_fenced_languages = ['ruby', 'html', 'javascript', 'css', 'erb=eruby.html', 'bash=sh']
 augroup END
 
-
 " Screen -----------------------------------------------------------------------
 augroup filetype_screen
   autocmd!
-  " Keep cursor vertically in middle for writing & width of 80 chars
-  au BufNewFile,BufReadPost *.screen setlocal ft=txt syntax=txt so=999 tw=60
+  " Keep cursor vertically in middle for writing & width of 80 chars. For some
+  " reason, this does not work unless we set ft=markdown
+  au BufNewFile,BufReadPost *.screen setlocal ft=markdown syntax=txt so=999 tw=60
 augroup END
 
 " Fish -------------------------------------------------------------------------
