@@ -345,7 +345,7 @@ augroup END
 augroup filetype_screen
   autocmd!
   " Keep cursor vertically in middle for writing & width of 80 chars
-  au BufNewFile,BufReadPost *.screen setlocal ft=screen syntax=txt so=999 tw=60
+  au BufNewFile,BufReadPost *.screen setlocal ft=txt syntax=txt so=999 tw=60
 augroup END
 
 " Fish -------------------------------------------------------------------------
