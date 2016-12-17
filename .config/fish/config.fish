@@ -86,6 +86,12 @@ function grhh   ; git reset HEAD --hard ; end
 function gclean ; git reset --hard; and git clean -dfx ; end
 function gwc    ; git whatchanged -p --abbrev-commit --pretty=medium ; end
 
+# Docker
+function d  ; docker $argv; end
+function di ; docker images $argv; end
+function dm ; docker-machine $argv ; end
+function dc ; docker-compose $argv ; end
+
 # Vagrant
 function vu   ; vagrant up ; end
 function vh   ; vagrant halt ; end
