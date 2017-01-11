@@ -56,7 +56,7 @@ function gd     ; git diff ; end
 function gdc    ; git diff --cached ; end
 function gl     ; git pull ; end
 function gup    ; git pull --rebase ; end
-function gp     ; git push ; end
+function gp     ; git push $argv ; end
 function gpt    ; git push --tags ; end
 function gcm    ; git commit -m $argv ; end
 function gco    ; git checkout $argv ; end
