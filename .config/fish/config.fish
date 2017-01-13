@@ -80,6 +80,7 @@ function grb    ; git rebase $argv; end
 function grbi   ; git rebase -i ; end
 function grbc   ; git rebase --continue ; end
 function grba   ; git rebase --abort ; end
+function grbs   ; git rebase --skip ; end
 function grh    ; git reset HEAD ; end
 function grhh   ; git reset HEAD --hard ; end
 function grv    ; git remote -v ; end
