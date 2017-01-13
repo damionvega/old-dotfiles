@@ -52,38 +52,39 @@ function vp ; nvim -p $argv ; end
 
 # Git
 function g      ; git $argv ; end
-function gd     ; git diff ; end
-function gdc    ; git diff --cached ; end
-function gl     ; git pull ; end
-function gup    ; git pull --rebase ; end
-function gp     ; git push $argv ; end
-function gpt    ; git push --tags ; end
+function ga     ; git add $argv ; end
+function gaa    ; git add --all $argv ; end
+function gb     ; git branch $argv ; end
 function gcm    ; git commit -m $argv ; end
 function gco    ; git checkout $argv ; end
-function gr     ; git remote $argv ; end
-function grv    ; git remote -v ; end
-function gsta   ; git stash ; end
-function gsp    ; git stash pop ; end
-function grb    ; git rebase ; end
-function grbi   ; git rebase -i ; end
-function grbc   ; git rebase --continue ; end
-function grba   ; git rebase --abort ; end
-function gb     ; git branch $argv ; end
 function gcp    ; git cherry-pick $argv ; end
-function glg    ; git log --stat --max-count=10 ; end
+function gclean ; git reset --hard; and git clean -dfx ; end
+function gd     ; git diff ; end
+function gdc    ; git diff --cached ; end
+function gdt    ; git difftool ; end
 function glgg   ; git log --graph --max-count=10 ; end
 function glgga  ; git log --graph --decorate --all ; end
 function glo    ; git log --oneline --decorate --color ; end
 function glog   ; git log --oneline --decorate --color --graph ; end
 function gst    ; git status ; end
-function ga     ; git add $argv ; end
-function gaa    ; git add --all $argv ; end
+function gl     ; git pull ; end
+function glr    ; git pull --rebase ; end
+function glro   ; git pull --rebase origin $argv; end
+function glg    ; git log --stat --max-count=10 ; end
 function gm     ; git merge $argv ; end
 function gmt    ; git mergetool ; end
-function gdt    ; git difftool ; end
+function gp     ; git push $argv ; end
+function gpt    ; git push --tags ; end
+function gr     ; git remote $argv ; end
+function grb    ; git rebase $argv; end
+function grbi   ; git rebase -i ; end
+function grbc   ; git rebase --continue ; end
+function grba   ; git rebase --abort ; end
 function grh    ; git reset HEAD ; end
 function grhh   ; git reset HEAD --hard ; end
-function gclean ; git reset --hard; and git clean -dfx ; end
+function grv    ; git remote -v ; end
+function gsta   ; git stash ; end
+function gsp    ; git stash pop ; end
 function gwc    ; git whatchanged -p --abbrev-commit --pretty=medium ; end
 
 # Docker
