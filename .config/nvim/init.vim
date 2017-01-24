@@ -251,10 +251,6 @@ iabbr piont point
 iabbr iamges images
 iabbr bdoy body
 
-" Change syntax to markdown
-" Keep cursor vertically in middle for writing & width of 80 chars
-nnoremap <leader>k :setlocal ft=markdown syntax=markdown so=999 tw=80<CR>
-
 " Disable Shift-k
 nnoremap <S-k> <Nop>
 
