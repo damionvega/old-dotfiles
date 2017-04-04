@@ -5,6 +5,7 @@
 call plug#begin('~/.config/nvim/plugs')
 
 Plug 'airblade/vim-gitgutter'
+Plug 'albertorestifo/github.vim'
 Plug 'dag/vim-fish'
 Plug 'damionvega/gruvbox'
 " Plug 'ElmCast/elm-vim'
