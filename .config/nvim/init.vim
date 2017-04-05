@@ -40,12 +40,14 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 set t_Co=256
 
 " Set syntax highlighting
-set background=dark
 syntax on
 
 " Color scheme
+set background=dark
 let g:gruvbox_contrast_dark = 'soft'
 colo gruvbox
+
+" colo github
 
 " Change mapleader
 let mapleader=','
