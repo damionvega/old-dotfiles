@@ -11,7 +11,6 @@ Plug 'damionvega/gruvbox'
 " Plug 'ElmCast/elm-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'rking/ag.vim'
 Plug 'scrooloose/nerdtree'
@@ -25,7 +24,6 @@ Plug 'tpope/vim-obsession'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
-Plug 'vim-scripts/fountain.vim'
 
 call plug#end()
 
