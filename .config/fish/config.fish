@@ -58,6 +58,7 @@ function gb     ; git branch $argv ; end
 function gcm    ; git commit -m $argv ; end
 function gco    ; git checkout $argv ; end
 function gcp    ; git cherry-pick $argv ; end
+function gcf    ; git git clean -df ; end
 function gclean ; git reset --hard; and git clean -dfx ; end
 function gd     ; git diff ; end
 function gdc    ; git diff --cached ; end
