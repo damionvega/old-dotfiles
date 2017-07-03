@@ -115,6 +115,9 @@ function nus  ; npm un -S $argv ; end
 function nusd ; npm un -D $argv ; end
 function nr   ; npm run $argv ; end
 
+# Heroku
+function h ; heroku $argv ; end
+
 # Elm
 function epi ; elm package install -y $argv ; end
 
