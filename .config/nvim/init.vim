@@ -65,7 +65,7 @@ set cursorline " Highlight current line
 set diffopt=filler " Add vertical spaces to keep right and left aligned
 set diffopt+=iwhite " Ignore whitespace changes (focus on code changes)
 set esckeys " Allow cursor keys in insert mode.
-" set expandtab " Expand tabs to spaces - github, other editor friendly
+set expandtab " Expand tabs to spaces - github, other editor friendly
 set foldcolumn=0 " Don't show column folds
 set nofoldenable
 set foldlevel=2
