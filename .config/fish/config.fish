@@ -125,7 +125,7 @@ function epi ; elm package install -y $argv ; end
 function mongodd ; mongod --fork --logpath /data/log/mongodb.log ; end
 
 # CocoaPods
-function pi ; pod install ; end
+function pi  ; pod install ; end
 function pir ; pod install --repo-update ; end
 
 # Completions
